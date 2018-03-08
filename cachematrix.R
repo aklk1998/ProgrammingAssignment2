@@ -3,9 +3,21 @@
 
 ## Write a short comment describing this function
 
+##
+## makeCacheMatrix creates a special "vector", which is really a list containing a function to
+##
+##    set the value of the matrix
+##
+##    get the inverse matrix
+##
+##    set the value of the inverse matrix
+##
+##    get the value of the inverse matrix
+##
+
 makeCacheMatrix <- function(x = matrix()) {
 
-##  1.set the value of the vector
+##  1.set the value of the matrix
   
   m <- NULL
   setmatrix <- function(y) {
@@ -13,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
     m <<- NULL
   }
   
-##  2.get the value of the vector
+##  2.get the value of the matrix
   
   getmatrix <- function() x
   
@@ -36,8 +48,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 
+##
+## Return a matrix that is the inverse of 'x'
+## If the result is already cached, use the cached values and display a message "getting cached data"
+##
+
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   
 ## check whehter the matrix has been inversed and saved
   
